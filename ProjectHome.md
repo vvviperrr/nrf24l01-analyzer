@@ -1,0 +1,1 @@
+This is a protocol analyzer plugin for Saleae Logic. It parses Saleae Logic analyzer captures and creates data structures which can be viewed with the Saleae Logic software.
