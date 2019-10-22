@@ -22,7 +22,7 @@ public:
 protected:	// vars
 
 	nRF24L01_AnalyzerSettings					mSettings;
-	std::auto_ptr<nRF24L01_AnalyzerResults>		mResults;
+	std::unique_ptr<nRF24L01_AnalyzerResults>	mResults;
 
 	AnalyzerChannelData*	mMiso;
 	AnalyzerChannelData*	mMosi;

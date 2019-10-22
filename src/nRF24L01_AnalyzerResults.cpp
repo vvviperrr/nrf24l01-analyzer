@@ -9,8 +9,8 @@
 #include "nRF24L01_Analyzer.h"
 #include "nRF24L01_AnalyzerSettings.h"
 
-nRF24L01_AnalyzerResults::nRF24L01_AnalyzerResults(nRF24L01_Analyzer* analyzer, nRF24L01_AnalyzerSettings* settings)
-:	mSettings(settings),
+nRF24L01_AnalyzerResults::nRF24L01_AnalyzerResults(nRF24L01_Analyzer* analyzer, nRF24L01_AnalyzerSettings* settings) :
+	mSettings(settings),
 	mAnalyzer(analyzer),
 	mCommandWordFrameIndex(0xFFFFFFFFFFFFFFFFLL)
 {}

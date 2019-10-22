@@ -1,11 +1,8 @@
 TARGET = libnrf24l01_analyzer.so
 
 CC ?= g++
-LDFLAGS = -lAnalyzer
-CFLAGS = -Wall -Iinclude -IAnalyzerSDK/include/
-
-CFLAGS += `pkg-config --cflags libusb-1.0`
-LDFLAGS += `pkg-config --libs libusb-1.0`
+LDFLAGS = -lAnalyzer64 -LAnalyzerSDK/lib/
+CFLAGS = -fPIC -Wall -Iinclude -IAnalyzerSDK/include/ 
 
 .PHONY: default all clean
 
@@ -24,10 +21,8 @@ $(OBJ)/%.o: %.cpp $(HEADERS)
 .PRECIOUS: $(TARGET) $(OBJECTS)
 
 $(TARGET): $(OBJECTS)
-	$(CC) $(OBJECTS) -Wall $(LDFLAGS) -o $@
+	$(CC) -shared $(OBJECTS) -Wall $(LDFLAGS) -o $@
 
 clean:
 	-rm -rf $(OBJ)
 	-rm -f $(TARGET)
-	-rm -f config.mk
-	-rm -f config.status

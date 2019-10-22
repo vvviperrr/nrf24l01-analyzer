@@ -22,11 +22,6 @@ public:
 
 	bool CreateFramesFromSpiBytes(const std::vector<SpiByte>& spi_bytes, U64 csnLow, U64 csnHi);
 
-protected: //functions
-
-	nRFCommand		mCommand;
-	U64				mCommandWordFrameIndex;
-
 protected:  //vars
 
 	// used for storing data that doesn't fit into Frame's mData1 and mData2
@@ -34,4 +29,7 @@ protected:  //vars
 
 	nRF24L01_AnalyzerSettings*	mSettings;
 	nRF24L01_Analyzer*			mAnalyzer;
+
+	nRFCommand		mCommand;
+	U64				mCommandWordFrameIndex;
 };
