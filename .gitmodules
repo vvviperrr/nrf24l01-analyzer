@@ -1,0 +1,4 @@
+[submodule "AnalyzerSDK"]
+	path = AnalyzerSDK
+	url = https://github.com/saleae/AnalyzerSDK
+	branch = master
